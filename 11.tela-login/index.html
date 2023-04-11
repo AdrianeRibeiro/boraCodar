@@ -27,17 +27,27 @@
         <form>
           <div class="input-wrapper">
             <label for="email">E-mail</label>
-            <input id="email" type="email" name="email" required>
+            <input 
+              id="email" 
+              type="email" 
+              name="email"
+              placeholder="Digite seu e-mail"
+              required
+            >
           </div>
 
           <div class="input-wrapper">
-            <div class="label-wrapper">
-              <label for="">Senha</label>
+            <div class="label-wrapper flex">
+              <label for="senha">Senha</label>
               <a href="#">Esqueceu a senha?</a>
             </div>
-            <input type="password" id="senha">
-            <img class="show-password" src="" alt="">
-            <img class="hide-password" src="" alt="">
+            <input 
+              type="password" 
+              id="senha"
+              placeholder="Digite sua senha"
+            >
+            <img onclick="togglePassword()" class="eye" src="./assets/eye-off.svg" alt="">
+            <img onclick="togglePassword()" class="eye hide" src="./assets/eye.svg" alt="">
           </div>
 
           <button type="submit">Entrar</button>
@@ -51,5 +61,15 @@
     </div>
     <img src="./assets/bg.jpg" alt=""/>
   </div>
+  <script>
+    function togglePassword() {
+      document.querySelectorAll('.eye').forEach((eye) => {
+        eye.classList.toggle('hide')
+      })
+
+      const type = senha.getAttribute('type') == 'password' ? 'text' : 'password'
+      senha.setAttribute('type', type)
+    }
+  </script>
 </body>
 </html>
