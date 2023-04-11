@@ -8,10 +8,22 @@
 
 :root {
   font-size: 62.5%;
+  font-family: 'Titillium Web', sans-serif;
 }
 
 body {
   font-size: 1.6rem;
+}
+
+button {
+  all: unset;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #7c3aed;
+  font-weight: 700;
 }
 
 #page {
@@ -44,6 +56,17 @@ main {
   margin-top: 11.4rem;
 }
 
+h1 {
+  font-size: 3.6rem;
+  line-height: 5.5rem;
+  color: #1E293B;
+}
+
+h1 + p {
+  color: #475569;
+  margin-top: 1.6rem;
+}
+
 .headline {
   max-width: 35rem;
 }
@@ -52,23 +75,81 @@ form {
   margin-top: 4rem;
 }
 
+.input-wrapper {
+  position: relative;
+}
+
+input::placeholder {
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+  color: #94a3b8;
+}
+
+label {
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+  color: #1E293B;
+}
+
+.label-wrapper {
+  justify-content: space-between;
+}
+
+.label-wrapper label + a {
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+}
+
+form input {
+  width: 100%;
+
+  background: #ffffff;
+  border: 0.1rem solid #e2e8f0;
+  border-radius: 0.4rem;
+  padding: 1.6rem 1.2rem;
+  margin-top: 0.8rem;
+}
+
+form .input-wrapper + .input-wrapper {
+  margin-top: 1.6rem;
+}
+
+::-ms-reveal {
+  display: none;
+}
+
+.eye {
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  top: 55%;
+  right: 5%;
+}
+
+.hide {
+  display: none;
+}
+
 form button {
-  all: unset;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 1.6rem 2.4rem;
 
   background: #7c3aed;
-  border-radius: 4px;
+  border-radius: 0.4rem;
   width: 100%;
 
   font-weight: bold;
   color: #ffffff;
+
+  margin-block: 3.2rem;
 }
 
 form button:focus {
-  outline: 2px solid black;
+  outline: 0.2rem solid black;
   border-radius: 0.4rem;
 }
 
