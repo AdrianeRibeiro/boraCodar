@@ -26,6 +26,10 @@ a {
   font-weight: 700;
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
 #page {
   height: 100vh;
 }
@@ -54,6 +58,7 @@ header img {
 
 main {
   margin-top: 11.4rem;
+  max-width: 38.4rem;
 }
 
 h1 {
@@ -80,9 +85,17 @@ form {
 }
 
 input::placeholder {
-  font-size: 1.4rem;
-  line-height: 2.1rem;
   color: #94a3b8;
+}
+
+input::focus,
+input::hover {
+  border: 1px solid #7c3aed;
+  outline: 0;
+}
+
+input:disabled {
+  opacity: 0.35;
 }
 
 label {
@@ -110,6 +123,10 @@ form input {
   border-radius: 0.4rem;
   padding: 1.6rem 1.2rem;
   margin-top: 0.8rem;
+
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+  color: #1e293b;
 }
 
 form .input-wrapper + .input-wrapper {
@@ -154,6 +171,45 @@ form button:focus {
 }
 
 form button:hover {
-  background: #7c3aed;
+  background: #9f67ff;
 }
 
+.create-account {
+  color: #475569;
+}
+
+@media (max-width: 900px) {
+  #page > * {
+    width: 100%;
+  }
+
+  #page > img  {
+    display: none;
+  }
+
+  #page > div {
+    padding: 11rem;
+  }
+
+  main {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  #page > * {
+    width: 100%;
+  }
+
+  #page > img  {
+    display: none;
+  }
+
+  #page > div {
+    padding: 4rem;
+  }
+
+  main {
+    max-width: 100%;
+  }
+}
